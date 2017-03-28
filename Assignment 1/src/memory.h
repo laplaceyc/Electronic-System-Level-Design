@@ -17,7 +17,7 @@ SC_MODULE(memory) {
     packet_type s;
     int retry;
 	
-	sc_uint<8> memory_reg[256];
+	sc_uint<8> memory_reg[4096];
 	
     void receive_data();
 
