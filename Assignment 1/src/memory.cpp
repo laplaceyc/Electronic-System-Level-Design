@@ -4,11 +4,23 @@
 
 using namespace std;
 void memory::receive_data() {
-    packin = mpackin;
+     packin = mpackin;
     if (packin == packold) return;
-	//copy packet
+	
 	packold = packin;
+	
+	sc_uint<32> tmp_addr = packin.addr;
+
     cout << "Memory: got packet no. = " << packin.seq << endl;
+
+	int pos = tmp_addr % 4096;
+	
+	if(packin.rw == true){
+		memory_reg[pos] = packin.data;
+	}
+	else {
+		packin.data = memory_reg[pos];
+	}
 
 	framenum = packin.seq;
 	
