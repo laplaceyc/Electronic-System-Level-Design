@@ -7,3 +7,5 @@ fix the original code from systemc 2.0, guarantee it works in systemc 2.3 enviro
 assignment 1 source code
 - log:
 contain each of output log of module
+# Project 1: Accellera Taiwan Forum
+A 10-page report about what you learned at the Accellera Taiwan Forum.
