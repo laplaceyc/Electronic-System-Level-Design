@@ -23,7 +23,7 @@ SC_MODULE (master) {
 	packet_type r;
 	int retry;
 	bool start;
-    ifstream infile;
+	ifstream infile;
   	ofstream outFile;
 	  
 	void send_data();
