@@ -9,7 +9,7 @@ assignment 1 source code
 contain each of output log of module
 # Project 1: Accellera Taiwan Forum
 A 10-page report about what you learned at the Accellera Taiwan Forum.
-# Assignment 2:
+# Assignment 2: CTOS synthesize
 - Design 1: Half and Full Adders
 Implement a half-adder, then use two (2) half-adders to implement a full adder. </br>
 Then synthesize the full adder using Cadence CTOS.
