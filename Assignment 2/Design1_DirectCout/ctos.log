@@ -1,0 +1,84 @@
+                         Cadence C-to-Silicon Compiler
+           Version 14.20-s400  (32 bit), build 84938 Mon, 27 Jun 2016
+
+Copyright notice: Copyright 2006-2014 Cadence Design Systems, Inc. All rights
+reserved worldwide.
+
+Patent notice: Protected by U.S. Patents 7472361, 7587687, 7673259, 7711536,
+8458630; other U.S. patents pending.
+
+    Date: Tue Jun  6 02:11:56 2017
+    Command:  /usr/cad/cadence/CTOS/cur/tools.lnx86/ctos/bin/32bit/ctos 
+% source fa.tcl
+[Front-end] Parsing the temporary combined source file /tmp/ctos_combined_source_a19437.cpp ...
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:5:1: ERROR (CTOS-5100): [Front-end] 
+     identifier "FA" is undefined
+SC_MODULE_EXPORT(FA);
+^
+In file included from /users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.cpp:2.
+
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.cpp:4:1: ERROR (CTOS-5100): [Front-end] 
+     variable "ctos_top_modules::FA" is not a type name
+SC_MODULE_EXPORT(FA);
+^
+
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.cpp:4:1: ERROR (CTOS-5100): [Front-end] 
+     variable "ctos_top_modules::FA" has already been defined
+SC_MODULE_EXPORT(FA);
+^
+
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:5:1: ERROR (CTOS-5100): [Front-end] 
+     variable "ctos_top_modules::FA" is not a type name
+SC_MODULE_EXPORT(FA);
+^
+In file included from /users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.cpp:2.
+
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:5:1: ERROR (CTOS-5100): [Front-end] 
+     variable "ctos_top_modules::FA" has already been defined
+SC_MODULE_EXPORT(FA);
+^
+In file included from /users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.cpp:2.
+
+[SystemC Parser] There were 5 error(s) 0 warning(s) 0 remark(s) during parsing
+UNSPECIFIED_FILENAME:0:0: WARNING (CTOS-5104): [Front-end] The previous errors may be due to combining sources into file '/tmp/ctos_combined_source_a19437.cpp'
+Error in processing command build
+
+% source fa.tcl
+Closing design FullAdder.
+[Front-end] Parsing the temporary combined source file /tmp/ctos_combined_source_b19437.cpp ...
+[SystemC Elaborator] Elaborating design in hierarchical mode ...
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:25:3: [SystemC Elaborator] Labeling method process 'prc_cout' as combinational
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/HA.h:12:3: [SystemC Elaborator] Labeling method process 'prc_half_adder' as combinational
+The design has 2 module(s), 0 array(s), 2 process(es), and 0 function(s).
+ERROR (CTOS-1061): Cannot create directory top/rtl because its parent directory /users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/top is not writable.
+Error in processing command build
+
+% source fa.tcl
+Closing design FullAdder.
+[Front-end] Parsing the temporary combined source file /tmp/ctos_combined_source_b19437.cpp ...
+[SystemC Elaborator] Elaborating design in hierarchical mode ...
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:25:3: [SystemC Elaborator] Labeling method process 'prc_cout' as combinational
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/HA.h:12:3: [SystemC Elaborator] Labeling method process 'prc_half_adder' as combinational
+The design has 2 module(s), 0 array(s), 2 process(es), and 0 function(s).
+ERROR (CTOS-1061): Cannot create directory top/rtl because its parent directory /users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/top is not writable.
+Error in processing command build
+
+% source fa.tcl
+Closing design FullAdder.
+[Front-end] Parsing the temporary combined source file /tmp/ctos_combined_source_b19437.cpp ...
+[SystemC Elaborator] Elaborating design in hierarchical mode ...
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/FA.h:25:3: [SystemC Elaborator] Labeling method process 'prc_cout' as combinational
+/users/course/2017S/cs613500/vlsipda14/ESL01/ESL_backup/HA.h:12:3: [SystemC Elaborator] Labeling method process 'prc_half_adder' as combinational
+The design has 2 module(s), 0 array(s), 2 process(es), and 0 function(s).
+Writing Post-Build Verilog Simulation Model:
+write_sim -type verilog -suffix _post_build -birthday -dir top/rtl /designs/FullAdder/modules/FA.
+Writing Verification Wrapper:
+write_wrapper -o top/rtl/FA_ctos_wrapper.h /designs/FullAdder/modules/FA.
+Starting final optimization of module 'FA'.
+Netlisting module 'FA'.
+Netlisting module 'HA'.
+Writing Final Verilog Simulation Model:
+write_sim -type verilog -suffix _final -dir top/rtl /designs/FullAdder/modules/FA.
+Saving design 'FullAdder' to top.
+Closing design FullAdder.
+% 
