@@ -11,8 +11,6 @@ contain each of output log of module
 A 10-page report about what you learned at the Accellera Taiwan Forum.
 # Assignment 2: High Level Synthesize
 - Design 1: Half and Full Adders
-Implement a half-adder, then use two half-adders to implement a full adder. </br>
-Then synthesize the full adder using Cadence CTOS.
+Implement a half-adder, then use two half-adders to implement a full adder. Then synthesize the full adder using Cadence CTOS.
 - Design 2: Finite Impulse Response Digital Filter
-Implement a 16th-order discrete-time Finite Impulse Response (FIR) digital filter, in 50MHz clock.</br> 
-Then synthesize the filter using Cadence CTOS.
+Implement a 16th-order discrete-time Finite Impulse Response (FIR) digital filter, in 50MHz clock. Then synthesize the filter using Cadence CTOS.
