@@ -1,0 +1,80 @@
+                         Cadence C-to-Silicon Compiler
+           Version 14.20-s400  (32 bit), build 84938 Mon, 27 Jun 2016
+
+Copyright notice: Copyright 2006-2014 Cadence Design Systems, Inc. All rights
+reserved worldwide.
+
+Patent notice: Protected by U.S. Patents 7472361, 7587687, 7673259, 7711536,
+8458630; other U.S. patents pending.
+
+    Date: Tue Jun  6 05:21:22 2017
+    Command:  /usr/cad/cadence/CTOS/cur/tools.lnx86/ctos/bin/32bit/ctos 
+% source filter.tcl
+[Front-end] Parsing MA_filter.cpp ...
+[SystemC Elaborator] Elaborating design in hierarchical mode ...
+MA_filter.h:6:22: [SystemC Elaborator] Renaming input/output/signal 'input' to 'input_' due to clash with SystemVerilog keyword
+MA_filter.h:7:23: [SystemC Elaborator] Renaming input/output/signal 'output' to 'output_' due to clash with SystemVerilog keyword
+The design has 1 module(s), 0 array(s), 1 process(es), and 0 function(s).
+Writing Post-Build Verilog Simulation Model:
+write_sim -type verilog -suffix _post_build -birthday -dir top/rtl /designs/Filter/modules/MA_filter.
+Writing Verification Wrapper:
+write_wrapper -o top/rtl/MA_filter_ctos_wrapper.h /designs/Filter/modules/MA_filter.
+Starting final optimization of module 'MA_filter'.
+================================================================================
+Creating required states for behavior: 'MA_filter_prc_MA_filter'
+Finished creating states in behavior 'MA_filter_prc_MA_filter'
+Creating initial resources for 17 shareable ops in behavior 'MA_filter_prc_MA_filter'.
+Created 17 shareable resources for behavior 'MA_filter_prc_MA_filter'.
+================================================================================
+Scheduling behavior: 'MA_filter_prc_MA_filter'.
+	Clock = clk  Period = 20000 ps
+	Total Ops = 68  Shareable Ops = 17
+	scheduling_effort = high
+	schedule_slack_margin = -393 ps
+	timing_criticality = auto (medium)
+
+Memory Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+--------------------------------------------------------------------------------
+   1	N/A       	100.00%	----		Memory phase completed.
+
+Timing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+--------------------------------------------------------------------------------
+   1	-7581ps    	99.99%	whileBot_ln12	Use clock scale 110.
+   2	-7581ps    	99.99%	whileBot_ln12	Use clock scale 120.
+   3	-7581ps    	99.99%	whileBot_ln12	Use clock scale 130.
+   4	-7581ps    	99.99%	whileBot_ln12	Use clock scale 100.
+   5	-7581ps    	100.00%	----		Timing phase completed.
+WARNING (CTOS-20500): The timing feasibility scheduling phase for behavior 'MA_filter_prc_MA_filter' ends up with -7581 slack. The slack violation would only increase when performing sharing feasibility scheduling phases. 
+
+Sharing Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+--------------------------------------------------------------------------------
+   1	-7581ps    	99.99%	whileBot_ln12	Use clock scale 110.
+   2	-7581ps    	99.99%	whileBot_ln12	Use clock scale 120.
+   3	-7581ps    	99.99%	whileBot_ln12	Use clock scale 130.
+   4	-7581ps    	99.99%	whileBot_ln12	Use clock scale 100.
+   5	-7581ps    	100.00%	----		Sharing phase completed.
+
+Final Phase
+Pass 	Slack     	%ops 	Edge         	Action/Status
+--------------------------------------------------------------------------------
+   1	-7581ps    	99.99%	whileBot_ln12	Use clock scale 110.
+   2	-7581ps    	99.99%	whileBot_ln12	Use clock scale 120.
+   3	-7581ps    	99.99%	whileBot_ln12	Use clock scale 130.
+   4	-7581ps    	99.99%	whileBot_ln12	Use clock scale 100.
+   5	-7581ps    	100.00%	----		Final phase completed.
+
+Scheduling completed.
+Starting post-scheduler optimizations on behavior 'MA_filter_prc_MA_filter'.
+Completed post-scheduler optimizations on behavior 'MA_filter_prc_MA_filter'.
+Creating register bindings for 1092 values in behavior 'MA_filter_prc_MA_filter'.
+Created 0 register bindings in behavior 'MA_filter_prc_MA_filter'.
+Behavior 'MA_filter_prc_MA_filter' contains 0 state, 0 tag, 544 output, and 0 data registers.
+Netlisting module 'MA_filter'.
+Writing Final Verilog Simulation Model:
+write_sim -type verilog -suffix _final -dir top/rtl /designs/Filter/modules/MA_filter.
+Saving design 'Filter' to top.
+Closing design Filter.
+% exit
