@@ -1,4 +1,5 @@
 #include "MA_filter.h"
+#define b0 (sc_uint<32>)0x00000F0F;
 #ifdef __CTOS__
 SC_MODULE_EXPORT(MA_filter);
 #endif
@@ -7,7 +8,7 @@ void MA_filter::prc_MA_filter(){
 	 mid4 = 0;  mid5 = 0;  mid6 = 0;  mid7 = 0;
 	 mid8 = 0;  mid9 = 0; mid10 = 0; mid11 = 0;
 	mid12 = 0; mid13 = 0; mid14 = 0; mid15 = 0;
-	b0 = (sc_uint<32>)0x00000F0F;
+//	b0 = (sc_uint<32>)0x00000F0F;
 	
 	while(1){
 	    wait();
